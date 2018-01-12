@@ -95,3 +95,7 @@ RUN \
   apt-get update && \
   apt-get install sbt && \
   sbt sbtVersion
+
+# Install AWS CLI
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -qy python-pip
+RUN pip install awscli
